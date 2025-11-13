@@ -1,0 +1,361 @@
+/* ==================================== */
+/* 1.5. DROPDOWN (AÇILIR MENÜ) STİLLERİ */
+/* ==================================== */
+/* Ana li elementini relative konumlandırıyoruz */
+.main-nav ul li.dropdown {
+    position: relative;
+}
+
+/* Dropdown menüsü (alt menü) */
+.dropdown-menu {
+    display: none;
+    /* Varsayılan olarak gizle */
+    position: absolute;
+    top: 100%;
+    /* Ana menü öğesinin hemen altına konumlandır */
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 180px;
+    /* Menünün genişliği */
+    background-color: white;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    /* Diğer her şeyin üzerinde görünmesi için */
+}
+
+/* Dropdown menüsü öğeleri */
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #f5f5f5;
+    text-align: left;
+}
+
+/* Dropdown menüsü içindeki bağlantılar */
+.dropdown-menu li a {
+    color: var(--dark-text);
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap;
+    /* Metnin tek satırda kalmasını sağlar */
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+/* Alt menü bağlantıları üzerine gelindiğinde */
+.dropdown-menu li a:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    /* Kırmızı metin rengi */
+}
+
+/* Dropdown'ın fare üzerine gelince görünmesini sağlama */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+/* Ok ikonuna stil verme */
+.main-nav ul li.dropdown a i {
+    font-size: 0.8em;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+/* Dropdown açıldığında ok ikonunu çevirme (isteğe bağlı) */
+.dropdown:hover>a i {
+    transform: rotate(180deg);
+}
+
+/* ==================================== */
+/* 2. HEADER VE NAVİGASYON              */
+/* ==================================== */
+.logo img {
+    /* Logonun maksimum yüksekliğini 50 piksel ile sınırlıyoruz. */
+    height: 60px;
+    /* Genişliğin otomatik olarak ayarlanmasını sağlıyoruz. */
+    width: auto;
+    display: block;
+}
+
+.main-header {
+    padding: 10px 0;
+    /* Boşluğu azaltabiliriz */
+    height: 80px;
+    /* Header yüksekliğini sabitlersek logo ne olursa olsun barı bozmaz */
+    display: flex;
+    /* Yüksekliği sabitlediğimizde içeriği ortalamak için */
+    align-items: center;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--dark-text);
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #92000A;
+}
+
+/* Vurgulu İletişim Butonu Stili */
+.contact-btn {
+    background-color: #92000A;
+    color: white !important;
+    border-radius: 5px;
+    padding: 8px 20px !important;
+}
+
+.contact-btn:hover {
+    background-color: #720000;
+}
+
+/* ==================================== */
+/* 3.5. YUKARI ÇIKMA BUTONU           */
+/* ==================================== */
+/* 1. Butonun Sol Alta Sabitlenmesi */
+#yukariCikButonu {
+    position: fixed;
+    /* Ekran kaydırılsa bile sabit kalmasını sağlar */
+    bottom: 15px;
+    /* Alttan 20 piksel yukarıda */
+    left: 98%;
+    /* Soldan 20 piksel içeride */
+    z-index: 99;
+    /* Diğer içeriklerin üstünde görünmesini sağlar */
+
+    /* Görünüm Stilleri */
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #92000A;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 25px;
+    opacity: 0.8;
+}
+
+/* ==================================== */
+/* 3.5. SOSYAL MEDYA BUTONLARI           */
+/* ==================================== */
+/* Ana Konteynerin Sabitlenmesi */
+.sosyal-medya-butonlari {
+    position: fixed;
+    /* Ekranda sabit kalmasını sağlar */
+    top: 50%;
+    /* Ekranın dikey olarak ortasına hizalamaya başlar */
+    right: 15px;
+    /* Sağ kenara yakın konumlandırır */
+    transform: translateY(-50%);
+    /* Dikey hizalamayı tam ortaya getirir */
+    z-index: 100;
+    /* Diğer içeriklerin üstünde görünmesini sağlar */
+    display: flex;
+    flex-direction: column;
+    /* Butonları dikey olarak sıralar */
+    gap: 10px;
+    /* Butonlar arasına boşluk koyar */
+}
+
+/* Tüm Butonların Genel Stili */
+.buton {
+    width: 50px;
+    /* Buton genişliği */
+    height: 50px;
+    /* Buton yüksekliği (kare olması önemli) */
+    border-radius: 50%;
+    /* Butonu yuvarlak yapar */
+    display: flex;
+    align-items: center;
+    /* İçindeki ikonu dikey ortalar */
+    justify-content: center;
+    /* İçindeki ikonu yatay ortalar */
+    color: white;
+    /* İkon rengi */
+    font-size: 24px;
+    /* İkon boyutu */
+    text-decoration: none;
+    /* Alt çizgiyi kaldırır */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Hafif gölge */
+    transition: transform 0.3s ease;
+    /* Hover efekti için geçiş */
+}
+
+/* Hover Efekti */
+.buton:hover {
+    transform: scale(1.1);
+    /* Fare üstüne gelince butonu biraz büyütür */
+}
+
+/* Her Buton İçin Özel Renkler */
+.whatsapp {
+    background-color: #25D366;
+    /* WhatsApp yeşili */
+}
+
+.youtube {
+    background-color: #FF0000;
+    /* YouTube kırmızısı */
+}
+
+.instagram {
+    background-color: #C13584;
+    /* Instagram mor/pembe */
+}
+
+/* ==================================== */
+/* 5. FOOTER (ALT BİLGİ) - SON VERSİYON */
+/* ==================================== */
+
+:root {
+    /* Renkler */
+    --footer-bg: #29444b;
+    /* Koyu Gri/Mavi Ana Renk */
+    --footer-accent: #a30000;
+    /* Koyu Kırmızı Vurgu */
+    --footer-text: #ccc;
+    /* Açık Metin Rengi */
+    --footer-link-hover: #fff;
+    /* Link Hover Rengi */
+}
+
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    font-size: 0.95rem;
+}
+
+.footer-top {
+    padding: 60px 0;
+}
+
+/* Sütun Düzeni (CSS Grid) */
+.footer-grid {
+    display: grid;
+    /* 1. Sütun daha geniş, 2. ve 3. sütunlar eşit */
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+/* ------------------- Sütun 1: Logo ve Metin ------------------- */
+.footer-logo img {
+    height: 60px;
+    /* Logo yüksekliği */
+    width: auto;
+    margin-bottom: 25px;
+    background-color: #29444b;
+}
+
+.footer-col-info p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Sosyal İkonlar (Kırmızı Daireler) */
+.footer-social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--footer-accent);
+    color: white;
+    /* İkon rengi */
+    margin-right: 10px;
+    border-radius: 50%;
+    /* Daire şekli */
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.footer-social-links a:hover {
+    background-color: white;
+    color: var(--footer-accent);
+    /* Hover'da ikon kırmızı olsun */
+}
+
+/* ------------------- Sütun 2 & 3: Başlık ve Linkler ------------------- */
+.footer-col h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Linklerin 2 Sütunlu Grid Düzeni */
+.footer-links-grid {
+    display: flex;
+    gap: 20px;
+    /* İki link listesi arasındaki boşluk */
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 10px;
+}
+
+.footer-links-list a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s;
+    /* İşaret (>) zaten HTML'de eklendiği için burada görünümünü ayarlamaya gerek yok */
+}
+
+.footer-links-list a:hover {
+    color: var(--footer-link-hover);
+}
+
+/* ------------------- Sütun 3: İletişim Bilgileri ------------------- */
+.contact-line {
+    font-weight: 700;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 5px !important;
+    font-size: 1rem;
+}
+
+.footer-col-contact a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Alt Telif Hakkı Çubuğu */
+.footer-bottom {
+    background-color: var(--footer-accent);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.85rem;
+}

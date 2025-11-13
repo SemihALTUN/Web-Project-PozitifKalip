@@ -1,0 +1,136 @@
+/* ==================================== */
+/* 0. GENEL AYARLAR ve RENK DEĞİŞKENLERİ */
+/* ==================================== */
+
+/* Bu renkler, style.css dosyanızdaki değişkenler ile uyumlu olmalıdır */
+:root {
+    --dark-text: #212121;
+    --primary-color: #A30000;
+}
+
+/* ==================================== */
+/* 1. SAYFA BAŞLIĞI ve BREADCRUMB       */
+/* ==================================== */
+.page-header-wrapper-section {
+    background-color: var(--light-bg);
+    /* Hafif gri arka plan (Görseldeki gibi) */
+    text-align: center;
+    padding: 60px 0;
+    /* Daha geniş boşluk için padding'i artırdık */
+    margin-bottom: 1px;
+}
+
+page-header-wrapper-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    /* Koyu metin */
+    margin-bottom: 15px;
+    max-width: 800px;
+    /* Başlığın çok yayılmasını engelle */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+}
+
+page-header-wrapper-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--dark-text);
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+/* ==================================== */
+/* 2. TEKNOLOJİ KATALOĞU (GRID) YAPISI  */
+/* ==================================== */
+
+.tech-grid {
+    display: grid;
+    /* Masaüstü: Görseldeki gibi 4 sütunlu düzen */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    /* Header altındaki boşluk */
+}
+
+.tech-item {
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.tech-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Hafif gölge ve hover efekti */
+    transform: translateY(-3px);
+}
+
+.tech-item img {
+    width: 100%;
+    /* Tüm görsellerin eşit yükseklikte olmasını ve tam alanı kaplamasını sağlar */
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    /* Görsel köşesi yuvarlatma */
+}
+
+.tech-item p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    padding: 0 5px;
+    line-height: 1.3;
+}
+
+/* ==================================== */
+/* MOBİL UYUMLULUK (MEDIA QUERIES)      */
+/* ==================================== */
+
+@media (max-width: 992px) {
+
+    /* Tabletler için 3 sütun */
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Daha küçük tabletler için 2 sütun */
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Mobil cihazlar için 1 sütun */
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+}
