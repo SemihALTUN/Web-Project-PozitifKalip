@@ -1,7 +1,3 @@
-/* ==================================== */
-/* 1. GENEL AYARLAR VE SIFIRLAMA        */
-/* ==================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +5,10 @@
 }
 
 :root {
-    /* Renk Paleti (Değişkenler) */
     --primary-color: #007bff;
-    /* Poyrai ilhamlı Mavi/Turkuaz (Vurgu Rengi) */
     --secondary-color: #343a40;
-    /* Koyu Metin Rengi */
     --light-bg: #f8f9fa;
-    /* Açık Zemin Rengi */
     --dark-text: #212529;
-    /* Ana Metin Rengi */
     --font-family: 'Montserrat', sans-serif;
 }
 
@@ -27,14 +18,12 @@ body {
     color: var(--dark-text);
 }
 
-/* Tüm içeriği ortalamak ve genişliği sınırlamak için kapsayıcı */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Bölümler Arası Boşluk */
 .section-padding {
     padding: 80px 0;
 }
@@ -50,13 +39,8 @@ h3 {
     font-weight: 700;
 }
 
-/* ==================================== */
-/* 3. HERO ALANI                        */
-/* ==================================== */
-
 .hero-section {
     height: 80vh;
-    /* KENDİ GÖRSELİNİZİ BURAYA EKLEYİN */
     background: url('img/cnc.png') center/cover no-repeat;
     display: flex;
     justify-content: center;
@@ -106,90 +90,61 @@ h3 {
     background-color: #720000;
 }
 
-/* ==================================== */
-/* 3.5. REFERANSLAR (LOGOLAR)           */
-/* ==================================== */
-
 .ref-section {
     padding: 40px 0;
-    /* Boşluğu biraz azaltıyoruz */
 }
 
 .ref-logos {
     display: flex;
-    /* Öğeleri yan yana dizer */
     flex-wrap: wrap;
-    /* Eğer sığmazlarsa alt satıra geçmelerini sağlar (responsive) */
     justify-content: center;
-    /* Öğeleri yatayda ortalar */
     align-items: center;
     gap: 70px;
-    /* Logolar arasında boşluk bırakır */
 }
 
 .ref-logos img {
-    /* Logoların boyutunu kontrol ederiz */
     height: 60px;
-    /* Veya istediğiniz yüksekliği girin */
     width: auto;
     max-width: 120px;
-    /* Maksimum genişliği belirler */
     opacity: 0.6;
-    /* Marka uyumu için logoları hafifçe soluklaştırır (isteğe bağlı) */
     transition: opacity 0.3s;
 }
 
 .ref-logos img:hover {
     opacity: 1;
-    /* Mouse üstüne gelince canlandırır (isteğe bağlı) */
 }
-
-/* ==================================== */
-/* 3.7. HAKKIMIZDA BÖLÜMÜ (FLEX)        */
-/* ==================================== */
 
 .about-flex-container {
     display: flex;
-    /* İçerikleri yan yana hizala */
     gap: 40px;
-    /* Görsel ve metin arasında boşluk */
     align-items: center;
-    /* Öğeleri dikeyde ortala */
     margin-top: 40px;
 }
 
 .section-title {
-    /* Sola yaslı ve büyük harfli görünüm */
     text-align: left !important;
     text-transform: uppercase;
-    /* Tüm harfleri büyütür */
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 40px;
-    /* İçerikle arasında boşluk bırakır */
     color: var(--dark-text);
 }
 
 .about-image-wrapper {
     flex: 1;
-    /* Alandaki oransal payı */
     min-width: 0;
-    /* Flex hatasını engellemek için */
 }
 
 .about-image-wrapper img {
     width: 100%;
-    /* Kapsayıcısının tamamını kapla */
     height: auto;
     display: block;
     border-radius: 8px;
-    /* Köşeleri yumuşat */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about-text-content {
     flex: 1.5;
-    /* Metin alanına daha fazla alan ver (Görsel 1 birim, Metin 1.5 birim) */
 }
 
 .about-text-content h3 {
@@ -198,11 +153,9 @@ h3 {
     margin-top: 0;
 }
 
-/* Hakkımızda Bölümündeki Buton Stili (Kırmızı/Koyu renk uyumu için) */
 .about-cta-button {
     display: inline-block;
     background-color: #A30000;
-    /* Buton için koyu kırmızı (logodan ilham alındı) */
     color: white;
     text-decoration: none;
     padding: 12px 30px;
@@ -216,38 +169,24 @@ h3 {
     background-color: #720000;
 }
 
-/* ==================================== */
-/* 4. HİZMETLER/KART DÜZENİ (GRID)      */
-/* ==================================== */
-
 .service-grid {
     display: grid;
-    /* Masaüstü: 3 eşit sütun */
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
 }
 
-/* Servis İkonu Stili - GÜNCELLENDİ */
-/* Servis İkonu Stili - GÜNCELLENDİ */
 .service-icon {
     width: 360px;
-    /* Görselin genişliğini artır */
     height: 300px;
-    /* Görselin yüksekliğini artır */
     margin-bottom: 25px;
-    /* Başlık ile ikon arasında boşluğu biraz artır */
     object-fit: cover;
-    /* Görselin alanı doldurmasını ve oranları korumasını sağlar */
     border-radius: 5px;
-    /* İsteğe bağlı: Hafif köşeli kenarlar */
 }
 
-/* Servis Kartı Stili - GÜNCELLENDİ */
 .service-card {
     background-color: white;
     padding: 25px;
-    /* İç boşluğu biraz azaltıyoruz, kart kenarlarındaki boşluğu daraltır */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -255,7 +194,6 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* İçeriği yukarıdan başlatır */
     align-items: center;
 }
 
@@ -276,65 +214,4 @@ h3 {
     color: #92000A;
     text-decoration: none;
     font-weight: 600;
-}
-
-
-/* ==================================== */
-/* 6. MOBİL UYUMLULUK (MEDIA QUERIES)   */
-/* ==================================== */
-
-/* Tablet ve daha küçük ekranlar için (Max genişlik: 992px) */
-@media (max-width: 992px) {
-
-    /* Hero başlığını küçültme */
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    /* Kartları 2 sütunlu yapma */
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Telefon ve daha küçük ekranlar için (Max genişlik: 768px) */
-@media (max-width: 768px) {
-
-    .section-padding {
-        padding: 60px 0;
-    }
-
-    /* Header (Menüyü dikey hale getirme) */
-    .main-header .container {
-        flex-direction: column;
-        /* Öğeleri alt alta diz */
-        text-align: center;
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        /* Menü bağlantılarını alt alta diz */
-        margin-top: 10px;
-    }
-
-    .main-nav ul li a {
-        padding: 5px 15px;
-    }
-
-    /* Hero başlığını daha da küçültme */
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    /* Kartları tek sütunlu yapma */
-    .service-grid {
-        grid-template-columns: 1fr;
-        /* Tek sütun */
-    }
-
-    /* Footer öğelerini alt alta dizme */
-    .main-footer .container {
-        flex-direction: column;
-        gap: 10px;
-    }
 }
