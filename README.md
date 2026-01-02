@@ -1,9 +1,9 @@
-# 🚀 Pozitif Kalıp Kurumsal Web Sitesi Projesi
+#  Pozitif Kalıp Kurumsal Web Sitesi Projesi
 
 Bu proje, bir kalıp imalat ve CNC işleme şirketi olan **Pozitif Kalıp** için oluşturulmuş, modern ve tam **Responsive** (Duyarlı) tasarıma sahip kurumsal bir web sitesidir. Proje, web tasarım dersi kapsamında en iyi uygulama pratikleri (Semantic HTML, CSS Grid/Flexbox) kullanılarak geliştirilmiştir.
 
 
-## ✨ Proje Amacı ve Felsefesi
+## Proje Amacı ve Felsefesi
 
 Projenin temel amacı, Pozitif Kalıp'ın teknolojik yeterliliğini ve kurumsal güvenilirliğini dijital ortamda en iyi şekilde temsil etmektir.
 
@@ -13,7 +13,7 @@ Projenin temel amacı, Pozitif Kalıp'ın teknolojik yeterliliğini ve kurumsal 
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 Bu proje, tamamen front-end teknolojileri kullanılarak oluşturulmuştur.
 
@@ -22,7 +22,7 @@ Bu proje, tamamen front-end teknolojileri kullanılarak oluşturulmuştur.
 
 ---
 
-## 🧭 Proje Yapısı ve Navigasyon
+## Proje Yapısı ve Navigasyon
 
 Ana gezinme (`Navbar`) ve alt bilgi (`Footer`) tüm sayfalarda tutarlı bir şekilde kullanılmıştır.
 
@@ -36,7 +36,7 @@ Ana gezinme (`Navbar`) ve alt bilgi (`Footer`) tüm sayfalarda tutarlı bir şek
 
 ---
 
-## 📞 İletişim
+##  İletişim
 
 * **Geliştirici:** Semih ALTUN
 * **E-mail:** semiihaltun@gmail.com
