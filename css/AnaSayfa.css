@@ -113,7 +113,58 @@ h3 {
 .ref-logos img:hover {
     opacity: 1;
 }
+/* --- Referanslar Kayma Animasyonu Düzeltmesi --- */
 
+/* 1. Pencere (Maskeleme): Taşanları gizleyen kapsayıcı */
+.ref-section .container {
+    width: 100%;       /* Konteyner tam genişlikte olsun */
+    overflow: hidden;  /* Sağdan soldan taşanları gizle */
+    position: relative;
+}
+
+/* 2. Tren Rayı (Logoların olduğu şerit) */
+.ref-logos {
+    display: flex;          /* Yan yana diz */
+    flex-wrap: nowrap;      /* ÖNEMLİ: Asla alt satıra geçme! (Sorunun çözümü bu) */
+    align-items: center;    /* Dikeyde ortala */
+    gap: 70px;              /* Logolar arası boşluk */
+    
+    /* Genişlik ayarı: İçerik ne kadar uzunsa o kadar genişle */
+    width: max-content;     
+    
+    /* Animasyon: 'kaydirma' ismini kullan, 25 saniye sürsün, sonsuz döngü */
+    animation: kaydirma 25s linear infinite; 
+}
+
+/* 3. Logoların Ayarları */
+.ref-logos img {
+    height: 60px;       /* Yükseklik sabit */
+    width: auto;        /* Genişlik orantılı */
+    max-width: 150px;
+    flex-shrink: 0;     /* ÖNEMLİ: Resimler asla sıkışıp küçülmesin */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.ref-logos img:hover {
+    opacity: 1;
+}
+
+/* Mouse ile üzerine gelince dursun istersen bu kodu kullanabilirsin */
+.ref-logos:hover {
+    animation-play-state: paused;
+}
+
+/* 4. Animasyon Hareket Tanımı */
+@keyframes kaydirma {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* JS ile içeriği 2 katına çıkardığımız için %50 kaydığında başa saracak */
+        transform: translateX(-50%);
+    }
+}
 .about-flex-container {
     display: flex;
     gap: 40px;
