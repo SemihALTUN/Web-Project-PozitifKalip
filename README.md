@@ -19,7 +19,7 @@ Bu proje, tamamen front-end teknolojileri kullanılarak oluşturulmuştur.
 
 * **HTML:** Tüm sayfa yapısı ve semantik işaretlemeler için.
 * **CSS:** Tüm görsel tasarım, animasyonlar ve **Responsive** düzenler (Grid, Flexbox ve Media Queries) için.
-
+* **JavaScript:** Mobil menü (hamburger) etkileşimi, dinamik yukarı çık butonu ve galeri lightbox özellikleri için kullanılmıştır.
 ---
 
 ## Proje Yapısı ve Navigasyon
@@ -28,11 +28,12 @@ Ana gezinme (`Navbar`) ve alt bilgi (`Footer`) tüm sayfalarda tutarlı bir şek
 
 * **`index.html`:** Ana sayfa.
 * **`hakkımızda.html`:** Şirket hakkında detaylı bilgi ve kurumsal metin.
-* **`galeri.html`:** Fotoğraf ve teknoloji görsellerinin ızgara (grid) düzende sunulduğu sayfa.
+* **`galeri.html`:** Fotoğraf ve teknoloji görsellerinin sunulduğu interaktif sayfa.
 * **`videoGaleri.html`:** Üretim videolarının (YouTube embed) ızgara düzende sunulduğu sayfa.
-* **`iletişim.html`:** İletişim formu, harita ve bilgi kartlarını içeren sayfa.
+* **`iletişim.html`:** İletişim formu ve dinamik doğrulamaları içeren sayfa.
 * **`style.css`:** Genel ve global CSS stilleri.
 * **`[sayfa_adı].css`:** Sayfalara özel, benzersiz CSS stilleri (örn. `galeri.css`).
+* **`[sayfa_adı].js`:** Projenin interaktif özelliklerini (menü, form kontrolü vb.) yöneten JavaScript dosyalarını barındıran klasör.
 
 ---
 
