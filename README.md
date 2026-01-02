@@ -42,3 +42,4 @@ Ana gezinme (`Navbar`) ve alt bilgi (`Footer`) tüm sayfalarda tutarlı bir şek
 * **Geliştirici:** Semih ALTUN
 * **E-mail:** semiihaltun@gmail.com
 * **Proje Adresi:** [https://github.com/SemihALTUN/Web-Project-PozitifKalip](https://github.com/SemihALTUN/Web-Project-PozitifKalip)
+* **Site:** [https://semihaltun.github.io/Web-Project-PozitifKalip/](https://semihaltun.github.io/Web-Project-PozitifKalip/)
