@@ -3,9 +3,9 @@
     --footer-accent: #a30000;
     --footer-text: #ccc;
     --footer-link-hover: #fff;
-    --dark-text: #333; 
-    --primary-color: #92000A; 
-    --light-bg: #f9f9f9; 
+    --dark-text: #333;
+    --primary-color: #92000A;
+    --light-bg: #f9f9f9;
 }
 
 .main-header {
@@ -94,7 +94,7 @@
     color: var(--primary-color);
 }
 
-.dropdown:hover > .dropdown-menu {
+.dropdown:hover>.dropdown-menu {
     display: block;
 }
 
@@ -104,7 +104,7 @@
     transition: transform 0.3s;
 }
 
-.dropdown:hover > a i {
+.dropdown:hover>a i {
     transform: rotate(180deg);
 }
 
@@ -152,9 +152,17 @@
     transform: scale(1.1);
 }
 
-.whatsapp { background-color: #25D366; }
-.youtube { background-color: #FF0000; }
-.instagram { background-color: #C13584; }
+.whatsapp {
+    background-color: #25D366;
+}
+
+.youtube {
+    background-color: #FF0000;
+}
+
+.instagram {
+    background-color: #C13584;
+}
 
 .main-footer {
     background-color: var(--footer-bg);
@@ -259,87 +267,108 @@
 
 @media (max-width: 768px) {
     .main-header .container {
-        flex-wrap: wrap; 
-        align-items: flex-start; 
+        flex-wrap: wrap;
+        align-items: flex-start;
         height: auto;
     }
-    .main-header { height: auto; padding-bottom: 10px; }
-    
-    .main-nav { width: 100%; order: 2; }
-    .main-nav ul { flex-direction: column; width: 100%; margin-top: 15px; }
-    .main-nav ul li { width: 100%; text-align: center; border-bottom: 1px solid #eee; }
-    .main-nav ul li:last-child { border-bottom: none; }
-    .main-nav ul li.dropdown { position: static; }
-    
-    .dropdown-menu { position: relative; width: 100%; box-shadow: none; border: none; background-color: #f5f5f5; display: none !important; }
-    .dropdown:active > .dropdown-menu,
-    .dropdown:focus-within > .dropdown-menu { display: block !important; }
-    
-    .logo { order: 1; }
-    .contact-btn { margin: 10px auto; display: inline-block; }
-    
-    .footer-top { padding: 30px 0; }
-    .footer-grid { grid-template-columns: 1fr !important; gap: 30px; }
-    .footer-links-grid { flex-direction: column !important; gap: 0; }
-    
-    #yukariCikButonu { 
-        bottom: 70px; 
+    .main-header {
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .main-nav {
+        width: 100%;
+        order: 2;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+    .main-nav ul li.dropdown {
+        position: static;
+    }
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background-color: #f5f5f5;
+        display: none !important;
+    }
+    .dropdown:active>.dropdown-menu,
+    .dropdown:focus-within>.dropdown-menu {
+        display: block !important;
+    }
+    .logo {
+        order: 1;
+    }
+    .contact-btn {
+        margin: 10px auto;
+        display: inline-block;
+    }
+    .footer-top {
+        padding: 30px 0;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+    .footer-links-grid {
+        flex-direction: column !important;
+        gap: 0;
+    }
+    #yukariCikButonu {
+        bottom: 70px;
         font-size: 20px;
     }
-
     .sosyal-medya-butonlari {
         position: fixed;
         right: 15px;
         top: auto;
         bottom: 15px;
         transform: none;
-        flex-direction: row; 
+        flex-direction: row;
         gap: 8px;
     }
     .buton {
-        width: 40px; 
+        width: 40px;
         height: 40px;
         font-size: 20px;
     }
 }
-/* =========================================
-   JAVASCRIPT İÇİN GEREKLİ EK STİLLER
-   (Bu kısmı Style.css dosyanın en altına ekle)
-   ========================================= */
 
-/* --- 1. MOBİL MENÜ (HAMBURGER) STİLLERİ --- */
-
-/* Mobilde menü toggle butonunu göster */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Butonu görünür yap */
+        display: block;
         font-size: 2rem;
         cursor: pointer;
-        color: var(--dark-text); /* Logoyla uyumlu renk */
-        margin-left: auto; /* Sağa yasla */
+        color: var(--dark-text);
+        margin-left: auto;
         padding-right: 15px;
     }
-
-    /* Menü listesinin kapalı hali */
     .main-nav ul {
-        display: none; /* Varsayılan olarak gizli */
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: #fff;
         position: absolute;
-        top: 100%; /* Header'ın hemen altında başlasın */
+        top: 100%;
         left: 0;
         z-index: 1000;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        border-top: 3px solid #92000A; /* Üstüne ince bir çizgi estetik durur */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-top: 3px solid #92000A;
     }
-
-    /* JS ile 'aktif' sınıfı eklendiğinde menüyü göster */
     .main-nav ul.aktif {
         display: flex;
     }
-    
-    /* Mobilde linklerin görünümü */
     .main-nav ul li {
         width: 100%;
         text-align: center;
@@ -348,16 +377,12 @@
     }
 }
 
-/* Masaüstünde toggle butonunu gizle */
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
     }
 }
 
-
-/* --- 2. LIGHTBOX (RESİM BÜYÜTME) STİLLERİ --- */
-/* Galeri sayfasında resim büyütme arkaplanı */
 #lightbox {
     position: fixed;
     z-index: 9999;
@@ -365,161 +390,125 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Arkaplanı karart */
-    display: none; /* Başlangıçta gizli */
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
     justify-content: center;
     align-items: center;
     cursor: zoom-out;
 }
 
-/* JS 'active' sınıfı eklediğinde görünür yap */
 #lightbox.active {
     display: flex;
     animation: fadeIn 0.3s ease;
 }
 
-/* Büyüyen resmin özellikleri */
 #lightbox img {
     max-width: 90%;
     max-height: 90%;
     border: 4px solid #fff;
     border-radius: 5px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
-/* Açılış animasyonu */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-/* --- HAMBURGER MENÜ AYARLARI --- */
-
-/* --- MOBİL MENÜ DÜZENLEMESİ (KESİN ÇÖZÜM) --- */
 
 @media (max-width: 768px) {
-    
-    /* 1. Kapsayıcı Ayarları */
     .main-header .container {
         display: flex;
-        flex-wrap: wrap; /* İçerik sığmazsa aşağı kaymasına izin ver */
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between; /* Biri sağa biri sola */
+        justify-content: space-between;
         position: relative;
     }
-
-    /* 2. Sıralama (Order) Ayarları - SORUNUN ÇÖZÜMÜ BURADA */
     .logo {
-        order: 1; /* Logo birinci sırada olsun */
+        order: 1;
         display: block;
     }
-
     .menu-toggle {
-        order: 2; /* Hamburger menü ikinci sırada (Sağda) olsun */
-        display: block; /* Görünür yap */
+        order: 2;
+        display: block;
         font-size: 2rem;
         cursor: pointer;
         color: #333;
         padding: 10px;
     }
-
     .main-nav {
-        order: 3; /* Navigasyon kutusu üçüncü sırada (Görünmez ama orada) */
+        order: 3;
         width: 100%;
     }
-
-    /* 3. Açılır Menü Ayarları */
     .main-nav ul {
-        display: none; /* Gizli */
+        display: none;
         flex-direction: column;
-        width: 100%; /* Tam genişlik */
+        width: 100%;
         background-color: #fff;
-        position: absolute; /* Header'dan bağımsız yüzsün */
-        top: 100%; /* Header'ın tam altından başlasın */
+        position: absolute;
+        top: 100%;
         left: 0;
         z-index: 9999;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         border-top: 3px solid #92000A;
         margin: 0;
         padding: 0;
     }
-
-    /* JS ile tetiklenince görünür yap */
     .main-nav ul.aktif {
         display: flex;
     }
-
-    /* Linklerin görünümü */
     .main-nav ul li {
         width: 100%;
         text-align: center;
         border-bottom: 1px solid #eee;
     }
-
     .main-nav ul li a {
         padding: 15px;
         display: block;
     }
-    
-  /* --- MOBİL DROPDOWN (GÜÇLENDİRİLMİŞ) --- */
-    
-    /* --- MOBİL DROPDOWN (KESİN GÖRÜNÜRLÜK AYARI) --- */
-    
-    /* 1. Dropdown Menü Kapsayıcısı (Div) */
-    /* --- MOBİL DROPDOWN KUTU AYARI (Style.css En Alt Kısım) --- */
-
-    /* 1. Kapsayıcı Kutu Ayarı */
     .dropdown-menu {
-        /* ÖNEMLİ: Absolute yerine 'static' yapıyoruz ki altındakileri aşağı itsin */
-        position: static !important; 
+        position: static !important;
         float: none !important;
-        display: none !important; /* Varsayılan gizli */
+        display: none !important;
         width: 100% !important;
-        
-        /* KUTU GÖRÜNÜMÜ AYARLARI */
-        background-color: #e6e6e6 !important; /* Hafif gri bir zemin rengi */
+        background-color: #e6e6e6 !important;
         border-top: 1px solid #ccc !important;
         border-bottom: 1px solid #ccc !important;
-        box-shadow: inset 0 0 10px rgba(0,0,0,0.05) !important; /* İç gölge vererek derinlik katalım */
-        
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05) !important;
         padding: 0 !important;
         margin: 0 !important;
         z-index: 100;
     }
-
-    /* 2. JS ile tetiklenince GÖSTER */
     li.dropdown.acik .dropdown-menu {
         display: block !important;
-        animation: none !important; /* Animasyonu kapatalım, takılmasın */
+        animation: none !important;
     }
-
-    /* 3. İçindeki Linkler (Foto ve Video Galeri) */
     .dropdown-menu ul {
         display: block !important;
         width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
     }
-
     .dropdown-menu li {
         display: block !important;
         width: 100% !important;
-        border-bottom: 1px solid #d1d1d1 !important; /* Çizgiyle ayır */
-        text-align: left !important; /* Sola yasla */
+        border-bottom: 1px solid #d1d1d1 !important;
+        text-align: left !important;
         margin: 0 !important;
     }
-
     .dropdown-menu li a {
         display: block !important;
-        padding: 15px 0 15px 40px !important; /* Soldan boşluk ver (Girinti) */
-        color: #333 !important; /* Siyah yazı */
+        padding: 15px 0 15px 40px !important;
+        color: #333 !important;
         font-weight: 600 !important;
         font-size: 14px !important;
-        text-transform: uppercase; /* İstersen büyük harf yap */
+        text-transform: uppercase;
         background: transparent !important;
     }
-    
-    /* Tıklanınca rengi değişsin */
-    .dropdown-menu li a:active, 
+    .dropdown-menu li a:active,
     .dropdown-menu li a:focus {
         background-color: #dcdcdc !important;
     }
