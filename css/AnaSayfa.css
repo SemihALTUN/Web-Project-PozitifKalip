@@ -255,3 +255,31 @@ h3 {
     text-decoration: none;
     font-weight: 600;
 }
+.hero-content p::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+    color: #ffcc00; /* Pozitif Kalıp sarı tonu */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+/* Başlangıç durumu: Gizli ve biraz aşağıda */
+.hazir-animasyon {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+/* Görünürlük durumu: Aktif olduğunda yerine gelsin */
+.aktif-animasyon {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Kartların 3D geçişleri için yumuşatma */
+.service-card {
+    transition: transform 0.1s ease, opacity 0.8s ease-out, transform 0.8s ease-out;
+}

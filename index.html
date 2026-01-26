@@ -11,6 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="loader" style="position:fixed; width:100%; height:100vh; background:#ffffff; z-index:99999; display:flex; flex-direction:column; justify-content:center; align-items:center; top:0; left:0;">
+    <img src="img/Logo3.png" alt="Yükleniyor..." style="width:120px; animation: pulse 1.5s infinite;">
+    <div style="margin-top: 20px; width: 150px; height: 3px; background: #f0f0f0; border-radius: 10px; overflow: hidden;">
+        <div style="width: 100%; height: 100%; background: #ffcc00; animation: loadingBar 5s linear forwards;"></div>
+    </div>
+</div>
+
+<style>
+/* Yüklenme sırasında arka planın kaymasını engeller */
+body.loading-active {
+    overflow: hidden !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes loadingBar {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+}
+</style>
     <div id="sayfaBasi"></div>
     <a href="#sayfaBasi" id="yukariCikButonu">&#128962;</a>
     
@@ -59,7 +83,7 @@
         <section id="referanslar" class="ref-section section-padding bg-light">
             <div class="container">
                 <h2 style="text-align: center; margin-bottom: 40px;">REFERANSLARIMIZ</h2>
-                <div class="ref-logos">
+                <div class="ref-logos reveal-left">
                     <img src="img/Ref1.png" alt="Referans Logo 1">
                     <img src="img/Ref2.png" alt="Referans Logo 2">
                     <img src="img/Ref3.jpg" alt="Referans Logo 3">
@@ -88,17 +112,17 @@
             <div class="container">
                 <h2>NELER YAPIYORUZ</h2>
                 <div class="service-grid">
-                    <article class="service-card">
+                    <article class="service-card reveal"> 
                         <img src="img/KalipUretim.png" alt="Kalıp Üretimi" class="service-icon">
                         <h3>Kalıp Üretimi</h3>
                         <a href="nelerYapıyoruz.html#sayfaBasi">Detaylı İncele</a>
                     </article>
-                    <article class="service-card">
+                    <article class="service-card reveal">
                         <img src="img/FasonCnc.png" alt="Fason CNC" class="service-icon">
                         <h3>Fason CNC işleme</h3>
                         <a href="nelerYapıyoruz.html#iki">Detaylı İncele</a>
                     </article>
-                    <article class="service-card">
+                    <article class="service-card reveal"> 
                         <img src="img/KalipTamir.png" alt="Kalıp Tamir" class="service-icon">
                         <h3>Kalıp Tamiri</h3>
                         <a href="nelerYapıyoruz.html#uc">Detaylı İncele</a>
